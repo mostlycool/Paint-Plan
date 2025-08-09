@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Living Room Accent Wall Refinishing — Project Plan</title>
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --accent:#2b6cb0;
+    --muted:#6b7280;
+    --maxW:980px;
+    --glass: rgba(255,255,255,0.6);
+    --shadow: 0 6px 18px rgba(20,20,30,0.08);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #1f2937;
+  }
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,var(--bg),#eef2f6);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:28px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrapper{
+    width:100%;
+    max-width:var(--maxW);
+  }
+  header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .logo{
+    width:68px;height:68px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),#4c9bd9);
+    box-shadow: var(--shadow);
+    display:flex;align-items:center;justify-content:center;
+    color:white;font-weight:700;font-size:20px;
+  }
+  h1{margin:0;font-size:20px;}
+  .meta{color:var(--muted);font-size:13px}
+  main{
+    display:grid;
+    grid-template-columns: 1fr 360px;
+    gap:18px;
+    align-items:start;
+  }
+  @media (max-width:980px){
+    main{grid-template-columns:1fr;}
+  }
+  .card{
+    background:var(--card);
+    padding:18px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+  }
+  .section-title{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;margin-bottom:12px;
+  }
+  h2{margin:0;font-size:16px;}
+  p.lead{margin:0;color:var(--muted);font-size:14px}
+  .proposal-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px;
+  }
+  @media (max-width:720px){ .proposal-grid{grid-template-columns:1fr} }
+  ul{margin:8px 0 16px 20px;color:var(--muted);line-height:1.5}
+  .timeline{display:flex;flex-direction:column;gap:8px}
+  .timeline .day{display:flex;gap:10px;align-items:flex-start}
+  .badge{background:var(--accent);color:white;padding:6px 10px;border-radius:8px;font-size:13px}
+  /* Right column */
+  aside .summary {
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .cost-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f1f3f6}
+  .cost-row:last-child{border-bottom:0}
+  .total{font-weight:700;font-size:18px}
+  .shopping-list{margin:0;padding:0;list-style:none}
+  .shopping-list li{padding:8px 0;border-bottom:1px dashed #eef2f6;display:flex;justify-content:space-between;align-items:center}
+  .notes{font-size:13px;color:var(--muted);background:linear-gradient(180deg, #f9fafb, #ffffff);padding:10px;border-radius:8px;border:1px solid #eef2f6}
+  /* photos */
+  .photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .photos img{width:100%;height:120px;object-fit:cover;border-radius:8px;border:1px solid #eef2f6}
+  @media (max-width:520px){ .photos img{height:100px} .photos{grid-template-columns:1fr} }
+
+  /* checklist & instruction styles */
+  .checklist{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+  .check{display:flex;gap:10px;align-items:center}
+  input[type=checkbox]{width:16px;height:16px}
+  .step{margin:8px 0;padding-left:12px;color:var(--muted)}
+  .print-only{display:none}
+  @media print{
+    body{background:white;padding:0}
+    .wrapper{max-width:100%}
+    .logo, header .meta {display:none}
+    .print-only{display:block}
+  }
+
+  /* small helpers */
+  .muted{color:var(--muted);font-size:13px}
+  .kbd{background:#f3f4f6;border-radius:6px;padding:4px 8px;font-family:monospace;font-size:12px}
+  .btn{
+    display:inline-block;background:var(--accent);color:white;padding:9px 12px;border-radius:8px;text-decoration:none;font-weight:600;
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">LW</div>
+      <div>
+        <h1>Living Room Accent Wall Refinishing</h1>
+        <div class="meta">Objective: Refresh vaulted accent wall — exact color match, professional finish, budget-conscious</div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left / main content -->
+      <div>
+        <section class="card">
+          <div class="section-title">
+            <h2>Project Proposal — Executive Summary</h2>
+            <div class="muted">Estimated time: 2–3 days • Supplies: $120–$200</div>
+          </div>
+
+          <p class="lead">Goal: Repaint the main vaulted accent wall, matching existing color with spectrometer color match. Prioritize long-lasting, washable finish (eggshell) and a crisp professional look. Work scope below.</p>
+
+          <div class="proposal-grid">
+            <div>
+              <h3 style="font-size:14px;margin-bottom:6px">Scope of Work</h3>
+              <ul>
+                <li>Accurate area measurement and material calculations</li>
+                <li>Physical paint chip — spectrometer color match</li>
+                <li>Full surface prep: clean, repair, sand</li>
+                <li>One coat latex primer + two coats premium eggshell paint</li>
+                <li>Professional cleanup and room reset</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size:14px;margin-bottom:6px">Why this approach?</h3>
+              <ul>
+                <li>Primer ensures uniform absorption and color fidelity</li>
+                <li>Two finish coats for durability and deep color</li>
+                <li>Eggshell/satin avoids shine while remaining washable</li>
+                <li>One gallon of paint/primer is sufficient for this 200 sq ft wall</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h3 style="font-size:14px;margin-bottom:8px">Estimated Timeline</h3>
+            <div class="timeline">
+              <div class="day"><div class="badge">Day 1</div><div><strong>Shopping, room prep & repairs</strong><div class="muted">2–3 hours active work</div></div></div>
+              <div class="day"><div class="badge">Day 2</div><div><strong>Sanding, priming, 1st coat</strong><div class="muted">3–4 hours active work (plus dry time)</div></div></div>
+              <div class="day"><div class="badge">Day 3</div><div><strong>Second coat & cleanup</strong><div class="muted">2–3 hours active work</div></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">
+            <h2>Detailed DIY Guide — Step-by-Step</h2>
+            <div class="muted">Follow this checklist during the job</div>
+          </div>
+
+          <div style="display:flex;gap:16px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <h4 style="margin:6px 0">Phase 1 — Measurement & Color Match</h4>
+              <p class="muted step">Wall area calculation (rectangle + triangle) = <strong>200 sq ft</strong>. One gallon of primer and one gallon of paint are sufficient for primer + two finish coats for this surface.</p>
+              <ol style="margin:8px 0 0 20px">
+                <li class="muted step">Cut 1" paint chip behind an outlet or switch with a utility knife.</li>
+                <li class="muted step">Bring chip to Sherwin-Williams / Home Depot / Lowe's for spectrometer match.</li>
+              </ol>
+            </div>
+
+            <div style="flex:1;min-width:220px">
+              <h4 style="margin:6px 0">Phase 2 — Shopping & Tools</h4>
+              <p class="muted step">Buy quality mid-range primer and paint (eggshell). See the shopping summary on the right for itemized prices.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f2f4f7;margin:12px 0">
+
+          <h4 style="margin:6px 0">Phase 3 — Prep & Paint (detailed steps)</h4>
+          <div class="checklist">
+            <label class="check"><input type="checkbox" /> Move furniture & cover floors (drop cloths)</label>
+            <label class="check"><input type="checkbox" /> Turn off breaker, remove outlet plates, label screws</label>
+            <label class="check"><input type="checkbox" /> Tape edges with painter's tape and press edge tight</label>
+            <div class="step">Cleaning: TSP substitute or degreasing cleaner, wipe and let dry</div>
+            <div class="step">Repair: scrape bubbling, apply spackling in thin layers, let dry between coats</div>
+            <div class="step">Sand spackling flush, wipe dust with damp cloth</div>
+            <div class="step">Prime: cut in edges with angled brush, roll with 9" roller in W patterns</div>
+            <div class="step">Paint: two finish coats; cut in, then roll; maintain wet edge</div>
+            <div class="step">Remove tape at 45° while paint is slightly tacky for crisp lines</div>
+            <div class="step">Cleanup: wash brushes/rollers, reseal paint can, reattach plates after 24 hours</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4 style="margin:8px 0">Phase 4 — Final Steps</h4>
+            <ul>
+              <li class="muted">Label leftover paint with date & room (keeps matching easy)</li>
+              <li class="muted">Store brush/rolls if reusing; discard if cheap single-use</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:12px" class="photos">
+            <!-- Replace these image URLs with images in an images/ folder if you prefer -->
+            <img src="https://picsum.photos/seed/paint1/800/500" alt="Before photo placeholder" />
+            <img src="https://picsum.photos/seed/paint2/800/500" alt="During/Tools placeholder" />
+            <img src="https://picsum.photos/seed/paint3/800/500" alt="After photo placeholder" />
+            <img src="https://picsum.photos/seed/paint4/800/500" alt="Detail placeholder" />
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h2 style="font-size:15px;margin-bottom:8px">Pro Tips & Safety</h2>
+          <ul>
+            <li class="muted">Always test the matched paint on a small area — view in daylight and incandescent lighting.</li>
+            <li class="muted">Work in well-ventilated conditions if using stronger cleaners.</li>
+            <li class="muted">Wear a dust mask when sanding spackle.</li>
+            <li class="muted">If the wall has significant bubbling across a large area, consider consulting a pro for drywall replacement.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right column / summary -->
+      <aside>
+        <div class="card summary">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h2 style="font-size:15px;margin:0">Shopping List & Budget</h2>
+            <div class="muted">Estimated prices (mid-range)</div>
+          </div>
+
+          <ul class="shopping-list" aria-label="Shopping list with prices" style="margin-top:8px">
+            <li><span>Primer — 1 gallon (latex, good quality)</span><span>$25</span></li>
+            <li><span>Paint — 1 gallon (eggshell/satin)</span><span>$50</span></li>
+            <li><span>Painter's kit (roller frame + tray)</span><span>$20</span></li>
+            <li><span>Roller covers (9" 3/8&quot; nap, 2-pack)</span><span>$8</span></li>
+            <li><span>Angled sash brush (2"–2.5")</span><span>$12</span></li>
+            <li><span>Painter's tape (1.5&quot;)</span><span>$8</span></li>
+            <li><span>Drop cloths (canvas or plastic)</span><span>$10</span></li>
+            <li><span>Lightweight spackling compound</span><span>$6</span></li>
+            <li><span>Putty knife (2"–3")</span><span>$6</span></li>
+            <li><span>Sanding sponge (120–180 grit)</span><span>$5</span></li>
+            <li><span>TSP substitute / degreaser</span><span>$6</span></li>
+            <li><span>Rags / sponges</span><span>$5</span></li>
+            <li><span>5-in-1 painter's tool</span><span>$8</span></li>
+            <li><span>Misc (screws, tray liners, gloves)</span><span>$8</span></li>
+          </ul>
+
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid #f2f4f7">
+            <div class="cost-row">
+              <div class="muted">Estimated subtotal</div>
+              <div class="total">$177</div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="btn" href="#" onclick="window.print();return false">Print / Save PDF</a>
+              <a class="btn" style="background:#475569;text-decoration:none" href="#" onclick="alert('Replace placeholder images with photos in the images/ folder and re-open index.html to update.');return false">Add Photos</a>
+            </div>
+            <div class="muted" style="margin-top:8px;font-size:13px">Budget range: $120–$200 (this subtotal $177 fits in that range). Prices are estimates — shop locally for best deals.</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px 0">Quick Checklist</h3>
+          <div class="muted">
+            <ol style="margin:0 0 0 18px;padding:0">
+              <li>Get paint chip behind outlet & take to paint store</li>
+              <li>Buy primer + paint and tools</li>
+              <li>Prep room & repair wall</li>
+              <li>Prime then paint (2 coats)</li>
+              <li>Remove tape at 45°, clean up, label leftover paint</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px 0">Files & Sharing</h3>
+          <div class="muted">Save this file as <span class="kbd">index.html</span>. Add photos in <span class="kbd">images/</span> and replace the <span class="kbd">&lt;img&gt;</span> src with <span class="kbd">images/yourphoto.jpg</span>.</div>
+          <div style="margin-top:8px" class="print-only">Printable version includes photos and checklist for the contractor.</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer style="margin-top:14px;display:flex;gap:10px;align-items:center;justify-content:space-between">
+      <div class="muted">Prepared by: Your Name • Date: <strong><!-- Insert date here --> </strong></div>
+      <div class="muted">Questions? Reply to this email or attach photos of the wall for advice</div>
+    </footer>
+  </div>
+</body>
+</html>
