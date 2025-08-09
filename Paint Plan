@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Plan: Living Room Accent Wall</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 1rem 1.5rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .section-content {
+            padding: 1.5rem;
+        }
+        .step-number {
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 9999px;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
+
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900">Living Room Accent Wall Refinishing</h1>
+            <p class="text-lg text-gray-600 mt-2">A Professional Plan for a Perfect Finish</p>
+        </header>
+
+        <!-- Part 1: Project Proposal -->
+        <section class="section-card">
+            <div class="section-header">
+                <h2 class="text-2xl font-bold text-gray-900">Part 1: Project Proposal</h2>
+                <p class="text-sm text-gray-500">A concise summary for the project sponsor.</p>
+            </div>
+            <div class="section-content space-y-4">
+                <div>
+                    <h3 class="font-semibold text-lg">Objective</h3>
+                    <p class="text-gray-700">To professionally repaint the main vaulted accent wall in the living room. The goal is to refresh the space while precisely matching the existing paint color for a seamless look. This plan prioritizes a high-quality, long-lasting finish while maintaining a budget-conscious approach.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">Scope of Work</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Area Calculation & Planning:</strong> Accurately measure the wall to determine material requirements.</li>
+                        <li><strong>Color Matching:</strong> Obtain a physical sample for a perfect digital match.</li>
+                        <li><strong>Surface Preparation:</strong> Thoroughly clean the wall, repair imperfections, and sand for a smooth surface.</li>
+                        <li><strong>Priming:</strong> Apply one coat of high-quality latex primer.</li>
+                        <li><strong>Painting:</strong> Apply two coats of premium eggshell finish latex paint for durability.</li>
+                        <li><strong>Cleanup:</strong> Professional cleanup and return of the room to its original state.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">Estimated Timeline: 2-3 Days</h3>
+                    <p class="text-gray-700">The project is designed to be completed over a weekend or a few partial days to allow for proper drying times between steps.</p>
+                </div>
+                 <div>
+                    <h3 class="font-semibold text-lg">Estimated Cost (Supplies Only)</h3>
+                    <p class="text-gray-700">The estimated budget for all necessary tools and supplies is <strong class="text-blue-600">$140 - $210</strong>. This range ensures quality materials for a professional result.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Shopping List Summary -->
+        <section class="section-card">
+            <div class="section-header">
+                <h2 class="text-2xl font-bold text-gray-900">Shopping List & Budget</h2>
+                 <p class="text-sm text-gray-500">A detailed breakdown of all required materials and their estimated costs.</p>
+            </div>
+            <div class="section-content">
+                <ul class="space-y-3">
+                    <li class="flex items-center justify-between"><span><strong>Primer (1 Gallon):</strong> Zinsser Bulls Eye 1-2-3</span> <span class="font-mono text-blue-600 font-semibold">$25 - $30</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Paint (1 Gallon):</strong> Behr Ultra or Valspar Signature, Eggshell</span> <span class="font-mono text-blue-600 font-semibold">$40 - $45</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Painter's Kit:</strong> Roller, Frame, Tray & Liners</span> <span class="font-mono text-blue-600 font-semibold">$20 - $25</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Roller Covers (2-pack):</strong> 9-inch, 3/8" nap</span> <span class="font-mono text-blue-600 font-semibold">$8 - $12</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Angled Sash Brush:</strong> 2.5-inch</span> <span class="font-mono text-blue-600 font-semibold">$10 - $15</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Painter's Tape:</strong> ScotchBlue or FrogTape</span> <span class="font-mono text-blue-600 font-semibold">$7 - $10</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Drop Cloths:</strong> Canvas or Plastic</span> <span class="font-mono text-blue-600 font-semibold">$10 - $25</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Wall Repair:</strong> Spackling, Putty Knife, Sanding Sponge</span> <span class="font-mono text-blue-600 font-semibold">$14 - $21</span></li>
+                    <li class="flex items-center justify-between"><span><strong>Cleaning Supplies:</strong> TSP substitute & Rags</span> <span class="font-mono text-blue-600 font-semibold">$5 - $8</span></li>
+                    <li class="flex items-center justify-between"><span><strong>5-in-1 Painter's Tool</strong></span> <span class="font-mono text-blue-600 font-semibold">$7 - $10</span></li>
+                </ul>
+                <hr class="my-4">
+                <div class="flex items-center justify-between font-bold text-lg">
+                    <span>Total Estimated Cost:</span>
+                    <span class="text-blue-600">$140 - $210</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Part 2: Detailed DIY Guide -->
+        <div class="section-header rounded-t-xl">
+             <h2 class="text-2xl font-bold text-gray-900">Part 2: Detailed DIY Guide</h2>
+             <p class="text-sm text-gray-500">A step-by-step plan for execution.</p>
+        </div>
+
+        <!-- Phase 1: Measurement & Planning -->
+        <section class="section-card !mt-0 !rounded-t-none">
+            <div class="section-header">
+                <h3 class="text-xl font-bold text-gray-900">Phase 1: Measurement & Planning</h3>
+            </div>
+            <div class="section-content space-y-6">
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Confirm Measurements & Calculate Area</h4>
+                    <div class="md:flex md:space-x-6 space-y-4 md:space-y-0">
+                        <div class="md:w-1/2">
+                            <img src="dimensions.jpg" alt="Wall with dimensions" class="rounded-lg shadow-md w-full h-auto"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Wall+Dimensions';">
+                        </div>
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-2">The wall is a rectangle with a triangle on top.</p>
+                            <ul class="list-none space-y-2 text-gray-700">
+                                <li>Rectangle Area: 20 ft × 8 ft = <strong>160 sq ft</strong></li>
+                                <li>Triangle Area: ½ × 20 ft × 4 ft = <strong>40 sq ft</strong></li>
+                                <li class="border-t pt-2 mt-2">Total Area: 160 + 40 = <strong class="text-xl text-blue-600">200 sq ft</strong></li>
+                            </ul>
+                            <p class="mt-4 text-sm text-gray-600 bg-gray-100 p-3 rounded-lg"><strong>Why this matters:</strong> A standard gallon of paint covers ~350 sq ft. One gallon of primer and one gallon of paint will be sufficient for two coats, with some left over.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Get a Perfect Color Match</h4>
+                     <div class="md:flex md:space-x-6 space-y-4 md:space-y-0">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-2">The paint color looks very different in incandescent vs. daylight. Do not guess or use a photo for matching.</p>
+                            <p class="text-gray-700"><strong class="text-blue-600">Action:</strong> Using a utility knife, carefully cut a 1-inch square of paint from an inconspicuous area (e.g., behind an outlet cover). Take this physical chip to a paint store for a spectrometer analysis to create an exact digital match.</p>
+                        </div>
+                        <div class="md:w-1/2">
+                             <img src="swatch.jpg" alt="Paint color in different lighting" class="rounded-lg shadow-md w-full h-auto"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Color+Swatch';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 3: The Work -->
+        <section class="section-card">
+            <div class="section-header">
+                <h3 class="text-xl font-bold text-gray-900">Phase 2: The Work - A Step-by-Step Guide</h3>
+            </div>
+            <div class="section-content space-y-8">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Prep the Room (Don't Skip This!)</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li>Move furniture away from the wall.</li>
+                            <li>Cover floors and remaining furniture with drop cloths.</li>
+                            <li>Turn off circuit breaker and remove outlet/switch faceplates.</li>
+                            <li>Apply painter's tape along the ceiling, baseboards, and adjacent walls.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Prep the Wall</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li>Wipe down the entire wall with a cleaner (like TSP substitute) to remove dust and grime. Let dry.</li>
+                            <li>Scrape off any paint bubbles. Fill divots and nail holes with spackling. Let dry.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Sand</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li>Lightly sand the spackled areas until perfectly smooth.</li>
+                            <li><strong>Crucial:</strong> Wipe the entire wall with a damp cloth to remove all sanding dust. Let dry.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Prime the Wall</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li><strong>Cut In:</strong> Use your angled brush to paint a 2-3 inch strip of primer along all taped edges and corners.</li>
+                            <li><strong>Roll:</strong> Use a roller to apply primer to the rest of the wall in large "W" patterns.</li>
+                            <li>Let the primer dry completely (check can for times, usually 1-2 hours).</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Paint - First Coat</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li>The process is identical to priming. Cut in first, then roll the wall.</li>
+                            <li>Keep a "wet edge" by overlapping with the still-wet paint from your last roller pass to prevent lines.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Step 6 -->
+                <div class="flex items-start space-x-4">
+                    <div class="step-number">6</div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Paint - Second Coat & Tape Removal</h4>
+                        <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                            <li>Wait for the first coat to dry completely (check can, typically 2-4 hours).</li>
+                            <li>Apply the second coat exactly as you did the first.</li>
+                            <li><strong>Sharp Lines:</strong> While the second coat is still slightly wet, carefully pull the painter's tape off at a 45-degree angle.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 4: Cleanup -->
+        <section class="section-card">
+            <div class="section-header">
+                <h3 class="text-xl font-bold text-gray-900">Phase 3: Cleanup & Final Touches</h3>
+            </div>
+            <div class="section-content space-y-4">
+                <p class="text-gray-700">You're almost done! Proper cleanup ensures a professional end to the project.</p>
+                 <ul class="list-disc list-inside text-gray-700 mt-1 space-y-1">
+                    <li>Wash your brush and roller immediately with warm, soapy water.</li>
+                    <li>Pour leftover paint back into the can, seal tightly, and label it with the room name and date.</li>
+                    <li>Wait 24 hours for the paint to fully dry before replacing outlet covers.</li>
+                    <li>Fold up drop cloths, move furniture back, and admire your work!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-10 text-gray-500 text-sm">
+            <p>Project Plan Generated on August 7, 2025.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
