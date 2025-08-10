@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Living Room Accent Wall — Project Plan</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#ffffff; --muted:#6b7280; --accent:#0b66c2;
+    --accent-2:#0f1724; --success:#16a34a; --glass: rgba(255,255,255,0.6);
+    --maxW:1000px;
+    --card-radius:14px;
+  }
+  [data-theme="dark"]{
+    --bg:#0b0f13; --card:#07101a; --muted:#9aa6b2; --accent:#3ea0ff; --accent-2:#e6eefc;
+  }
+
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg), #e9eef5);color:var(--accent-2);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxW);margin:28px auto;padding:0 18px;}
+  header.site{
+    display:flex;align-items:center;gap:18px;margin-bottom:18px;
+  }
+  .logo{
+    width:76px;height:76px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#55a6ff);
+    box-shadow:0 8px 28px rgba(11,102,194,0.14);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;flex-shrink:0;
+  }
+  .title{
+    flex:1;
+  }
+  .title h1{margin:0;font-size:28px;color:var(--accent-2);letter-spacing:-0.4px}
+  .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
+  .controls{display:flex;gap:8px;align-items:center}
+
+  /* hero / proposal */
+  .hero{display:flex;gap:18px;background:var(--card);border-radius:var(--card-radius);padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.06);}
+  .hero-left{flex:1;padding-right:6px}
+  .hero-right{width:320px;min-width:220px}
+  .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#3ea0ff);color:white;font-weight:700;font-size:13px}
+  .big{
+    display:flex;gap:12px;align-items:center;margin-top:12px;
+  }
+  .stat{
+    background:linear-gradient(180deg,#ffffff, #f6fbff);padding:12px;border-radius:12px;min-width:120px;text-align:center;border:1px solid rgba(10,20,50,0.04)
+  }
+  [data-theme="dark"] .stat{background:linear-gradient(180deg,#07101a,#071821);border:1px solid rgba(255,255,255,0.03)}
+  .stat .label{font-size:12px;color:var(--muted);margin-bottom:6px}
+  .stat .value{font-size:20px;font-weight:800;color:var(--accent)}
+  .stat.small .value{font-size:16px}
+  .proposal-copy{color:#0f1724}
+  [data-theme="dark"] .proposal-copy{color:var(--accent-2)}
+
+  /* jump nav */
+  .jumpbar{display:flex;gap:8px;margin:14px 0}
+  .jumpbar a{background:transparent;border:1px solid rgba(11,102,194,0.12);padding:8px 10px;border-radius:8px;color:var(--accent);text-decoration:none;font-weight:600;font-size:13px}
+  [data-theme="dark"] .jumpbar a{border-color:rgba(62,160,255,0.12)}
+
+  /* main columns */
+  .columns{display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:14px}
+  
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);border:1px solid rgba(10,20,40,0.03)}
+  [data-theme="dark"] .card{background:#07121a;border:1px solid rgba(255,255,255,0.03);box-shadow:none}
+
+  /* --- MODIFIED: Shopping List Styles --- */
+  .shop-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+  .shop-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(10,20,40,0.04);
+  }
+  .shop-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+  .item-text {
+    flex-grow: 1;
+  }
+  .item-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--accent-2);
+    cursor: pointer;
+    display: block; /* Make label a block */
+  }
+  .item-desc {
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .item-desc.product-link {
+    color: var(--accent);
+  }
+  .item-desc.product-link:hover {
+    text-decoration: underline;
+  }
+  .price {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--accent);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .shop-item:has(.shop-checkbox:checked) .item-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  .shop-hint{color:var(--muted);font-size:13px;margin-top:8px}
+
+  /* --- MODIFIED: Guide Styles --- */
+  .steps{display:flex;flex-direction:column;gap:16px}
+  .step{
+    background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(10,20,40,0.03)
+  }
+  [data-theme="dark"] .step{background:linear-gradient(180deg,#07121a,#071a21);border:1px solid rgba(255,255,255,0.03)}
+  
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .step .num{
+    width:48px;height:48px;border-radius:50%;
+    background:linear-gradient(180deg,var(--accent),#3ea0ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px;cursor:pointer;
+    box-shadow:0 8px 18px rgba(11,102,194,0.12);
+    flex-shrink:0;
+  }
+  .step .num.checked{background:var(--success);box-shadow:0 8px 18px rgba(22,163,74,0.12)}
+  .step h3{margin:0;font-size:18px;color:var(--accent-2)}
+  
+  .step-body {
+    padding-left: 0; /* Align body content to the left */
+  }
+  .step .meta{font-size:13px;color:var(--muted);margin: 0 0 8px 0;}
+  .step ul{
+    margin: 0; 
+    padding-left: 18px; /* Standard indent for bullets */
+    color:var(--muted);
+  }
+
+  /* images */
+  .img-block{border-radius:10px;overflow:hidden;border:1px solid rgba(10,20,40,0.03)}
+  .img-block img{display:block;width:100%;height:auto}
+
+  /* footer / misc */
+  footer{margin-top:20px;padding-bottom:20px;text-align:center;color:var(--muted);font-size:13px}
+  .small{font-size:13px;color:var(--muted)}
+
+  /* dark toggle */
+  .top-controls{display:flex;gap:8px;align-items:center;margin-left:auto}
+  .toggle{
+    width:44px;height:28px;border-radius:999px;background:#e6eefc;border:1px solid rgba(10,20,40,0.04);display:inline-flex;align-items:center;padding:4px;cursor:pointer;
+  }
+  .toggle .dot{width:20px;height:20px;border-radius:50%;background:var(--accent);transition:transform .22s}
+  [data-theme="dark"] .toggle{background:#041022;border:1px solid rgba(255,255,255,0.06)}
+  [data-theme="dark"] .toggle .dot{transform:translateX(16px);background:#0ea5ff}
+
+  /* back to top */
+  .to-top{
+    position:fixed;right:18px;bottom:18px;background:linear-gradient(180deg,var(--accent),#3ea0ff);color:white;border-radius:999px;padding:10px 12px;font-weight:800;box-shadow:0 12px 24px rgba(11,102,194,0.14);cursor:pointer;z-index:10;
+  }
+  [data-theme="dark"] .to-top{background:linear-gradient(180deg,#0ea5ff,#3ea0ff)}
+
+  a.product-link{color:var(--accent);text-decoration:none;font-weight:600}
+  .note{background:linear-gradient(180deg,#f8fbff,#ffffff);padding:10px;border-radius:10px;border:1px solid rgba(10,20,40,0.03);color:var(--muted);font-size:13px}
+
+  /* accessibility */
+  .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+  /* --- NEW: Responsive Styles --- */
+  @media(max-width:980px){
+    /* Stack main columns on tablets and below */
+    .columns{grid-template-columns:1fr}
+  }
+
+  @media(max-width: 820px) {
+    /* Stack hero section on tablets and below */
+    .hero {
+      flex-direction: column;
+    }
+    .hero-right {
+      width: 100%;
+      min-width: 100%;
+    }
+    .hero-left {
+      padding-right: 0;
+    }
+    .big {
+      flex-wrap: wrap; /* Allow stats to wrap if needed */
+    }
+    .stat {
+      flex-grow: 1; /* Allow stats to fill space evenly */
+    }
+    .title h1 {
+        font-size: 24px; /* Slightly smaller title on mobile */
+    }
+  }
+
+  @media(max-width: 640px) {
+    /* Stack header controls on mobile */
+    header.site {
+      flex-wrap: wrap;
+    }
+    .controls.top-controls {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+    .jumpbar {
+        margin: 0;
+        flex-grow: 1;
+    }
+    .jumpbar a {
+        flex-grow: 1;
+        text-align: center;
+    }
+    .toggle {
+        flex-shrink: 0;
+    }
+  }
+
+</style>
+</head>
+<body data-theme="light">
+  <div class="wrap">
+
+    <header class="site" role="banner">
+      <div class="logo">LW</div>
+      <div class="title">
+        <h1>Living Room Accent Wall — Refinishing Plan</h1>
+        <div class="subtitle">Exact color match • Professional finish • Weekend-friendly</div>
+      </div>
+
+      <div class="controls top-controls" aria-hidden="false">
+        <div class="jumpbar" style="margin-right:8px">
+          <a href="#shopping">Shopping List</a>
+          <a href="#guide">Full Guide</a>
+        </div>
+
+        <div title="Toggle dark mode" class="toggle" id="darkToggle" role="button" aria-pressed="false" aria-label="Toggle dark mode">
+          <div class="dot"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / PROPOSAL (big & infographic-like) -->
+    <section class="hero" aria-labelledby="proposalTitle">
+      <div class="hero-left">
+        <div style="display:flex;gap:10px;align-items:center">
+          <span class="pill">Proposal</span>
+          <div style="font-weight:800;font-size:15px;color:var(--muted)">Living Room Accent Wall Refinishing</div>
+        </div>
+
+        <h2 id="proposalTitle" style="margin-top:12px;font-size:20px;color:var(--accent-2)">Objective: refresh the vaulted accent wall with a perfect color match and durable eggshell finish</h2>
+
+        <p class="proposal-copy" style="margin-top:10px;color:var(--muted);line-height:1.45">
+          This plan aims for a seamless repaint using a physical paint chip for spectrometer matching, thorough surface preparation, primer, and two finish coats in eggshell — delivering a long-lasting, washable surface while staying budget-conscious.
+        </p>
+
+        <div class="big" style="margin-top:14px">
+          <div class="stat">
+            <div class="label">Estimated Time</div>
+            <div class="value">2–3 days</div>
+            <div class="small muted" style="margin-top:6px;">Weekend-friendly</div>
+          </div>
+          <div class="stat">
+            <div class="label">Supplies Cost</div>
+            <div class="value">$140–$210</div>
+            <div class="small muted" style="margin-top:6px;">(estimated, mid-range)</div>
+          </div>
+          <div class="stat small">
+            <div class="label">Wall Area</div>
+            <div class="value">200 sq ft</div>
+            <div class="small muted" style="margin-top:6px;">1 gal primer + 1 gal paint</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="note">
+            <strong>Quick decision points:</strong> use a physical swatch for matching (cut behind an outlet), use Zinsser Bulls Eye 1-2-3 primer, and choose Behr Ultra Scuff Defense or Valspar Signature eggshell for the finish (links below).
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card img-block" style="padding:0;overflow:hidden">
+            <img src="dimensions.jpg" alt="Wall dimensions" onerror="this.onerror=null;this.src='https://placehold.co/640x420/e9eef6/475569?text=dimensions.jpg';" />
+          </div>
+          
+          <div class="card" style="padding:12px;">
+            <div style="font-size:13px;color:var(--muted)">Measurements</div>
+            <div style="font-weight:800;font-size:20px;color:var(--accent);margin-top:6px">200 sq ft</div>
+            <div class="small" style="margin-top:8px">Rectangle: 20 × 8 = 160 • Triangle: 0.5 × 20 × 4 = 40</div>
+          </div>
+
+          <div class="card img-block" style="padding:0;overflow:hidden">
+            <img src="swatch.jpg" alt="Color swatch" onerror="this.onerror=null;this.src='https://placehold.co/640x220/e9eef6/475569?text=swatch.jpg';" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- columns: left=guide, right=shopping -->
+    <div class="columns" style="margin-top:18px">
+      <!-- LEFT: Full guide -->
+      <main id="guide" class="card" aria-labelledby="guideTitle">
+        <h3 id="guideTitle" style="margin-top:0;color:var(--accent)">Full DIY Guide — Step-by-step</h3>
+        <p class="small" style="margin-top:6px;color:var(--muted)">Detailed workflow to complete the job. Click the round step numbers to mark them done (they toggle to a ✓).</p>
+
+        <div style="height:12px"></div>
+
+        <div class="steps">
+          <!-- Step 1 -->
+          <div class="step" id="step-1">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="1" aria-pressed="false">1</div>
+                <h3>Prep the Room</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Move or protect furniture, remove outlet covers, tape edges.</p>
+                <ul>
+                    <li>Move furniture to the center or another room; cover with canvas/plastic drop cloths.</li>
+                    <li>Turn off circuit breaker for the wall and remove faceplates (label screws).</li>
+                    <li>Apply painter’s tape along ceiling, baseboards and adjacent walls; press down edges firmly for crisp lines.</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step" id="step-2">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="2" aria-pressed="false">2</div>
+                <h3>Prep the Wall</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Clean, scrape bubbles, spackle nail holes.</p>
+                <ul>
+                    <li>Clean entire surface with a TSP substitute (or degreasing cleaner) and allow to dry completely.</li>
+                    <li>Use a 5-in-1 tool to gently scrape bubbling paint; fill holes and shallow divots with lightweight spackling in thin layers.</li>
+                    <li>Let spackle fully dry per product instructions (often 30–60 min for lightweight products).</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step" id="step-3">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="3" aria-pressed="false">3</div>
+                <h3>Sand</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Feather edges smooth and remove dust.</p>
+                <ul>
+                    <li>Sand spackled areas with a 120–180 grit sanding sponge until flush and smooth.</li>
+                    <li>Run your hand over repaired spots; if you feel ridges, sand again. Wipe the wall with a damp cloth to remove all dust and let dry.</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step" id="step-4">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="4" aria-pressed="false">4</div>
+                <h3>Prime</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Seal repairs and normalize absorption.</p>
+                <ul>
+                    <li>Cut in with a 2–3" angled sash brush along taped edges and around outlets.</li>
+                    <li>Roll primer with a 9" roller using a 3/8" nap in "W" patterns (3'×3' sections), blending as you go.</li>
+                    <li>Let primer dry fully (Zinsser Bulls Eye 1-2-3 dries to touch in ~30 minutes; follow label for recoat).</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step" id="step-5">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="5" aria-pressed="false">5</div>
+                <h3>Paint — First Coat</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Cut in, then roll; maintain a wet edge.</p>
+                <ul>
+                    <li>Cut in all edges and corners with the angled sash brush using the final paint color.</li>
+                    <li>Roll the paint the same way you primed; keep a wet edge to avoid lap marks.</li>
+                    <li>Check paint in several lights (daylight + incandescent) — matched paint should look consistent.</li>
+                </ul>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step" id="step-6">
+            <div class="step-header">
+                <div class="num" role="button" tabindex="0" data-step="6" aria-pressed="false">6</div>
+                <h3>Paint — Second Coat & Tape Removal</h3>
+            </div>
+            <div class="step-body">
+                <p class="meta">Finish strong and remove tape at a 45° angle while paint is slightly tacky.</p>
+                <ul>
+                    <li>Allow first coat to dry (check the can; typically 2–4 hours) and apply a second coat the same way.</li>
+                    <li>Remove painter’s tape at a 45° angle while paint is still slightly tacky to ensure crisp lines.</li>
+                    <li>Let paint cure for 24 hours before heavy use; wait to reinstall outlet covers until fully dry.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- cleanup -->
+        <div style="margin-top:16px" class="card">
+          <h4 style="margin:0;color:var(--accent)">Cleanup & Finish</h4>
+          <p class="small" style="margin-top:8px;color:var(--muted)">Wash brushes/rollers with warm soapy water (for latex), seal leftover paint, label can with room & date, fold drop cloths, and restore furniture after paint is fully cured.</p>
+        </div>
+      </main>
+
+      <!-- RIGHT: Shopping -->
+      <aside id="shopping" class="card" aria-labelledby="shopTitle">
+        <h3 id="shopTitle" style="margin-top:0;color:var(--accent)">Shopping List — Exact items</h3>
+
+        <ul class="shop-list" style="margin-top:10px">
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-1" class="shop-checkbox" aria-label="Mark Primer as purchased">
+                <div class="item-text">
+                    <label for="shop-item-1" class="item-name">Primer</label>
+                    <a href="https://www.lowes.com/pd/Zinsser-Bulls-Eye-1-2-3-Interior-Exterior-Multi-Purpose-Water-Based-Wall-and-Ceiling-Primer-Actual-Net-Contents-128-fl-oz/3439970" class="item-desc product-link" target="_blank" rel="noopener">Zinsser Bulls Eye 1-2-3 (1 gal)</a>
+                </div>
+                <span class="price">$~30</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-2" class="shop-checkbox" aria-label="Mark Paint as purchased">
+                <div class="item-text">
+                    <label for="shop-item-2" class="item-name">Paint</label>
+                    <a href="https://www.homedepot.com/p/BEHR-ULTRA-1-gal-Medium-Base-Extra-Durable-Flat-Interior-Paint-Primer-172401/309713001" class="item-desc product-link" target="_blank" rel="noopener">Behr Ultra Scuff Defense or Valspar Signature (1 gal)</a>
+                </div>
+                <span class="price">$~40</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-3" class="shop-checkbox" aria-label="Mark Roller kit as purchased">
+                <div class="item-text">
+                    <label for="shop-item-3" class="item-name">Roller kit</label>
+                    <span class="item-desc">9" roller frame + tray + liners</span>
+                </div>
+                <span class="price">$20–25</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-4" class="shop-checkbox" aria-label="Mark Roller covers as purchased">
+                <div class="item-text">
+                    <label for="shop-item-4" class="item-name">Roller covers</label>
+                    <span class="item-desc">9" (3/8" nap) — 2-pack</span>
+                </div>
+                <span class="price">$8–12</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-5" class="shop-checkbox" aria-label="Mark Angled sash brush as purchased">
+                <div class="item-text">
+                    <label for="shop-item-5" class="item-name">Angled sash brush</label>
+                    <span class="item-desc">2"–2.5" (high-quality)</span>
+                </div>
+                <span class="price">$10–15</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-6" class="shop-checkbox" aria-label="Mark Painter's tape as purchased">
+                <div class="item-text">
+                    <label for="shop-item-6" class="item-name">Painter's tape</label>
+                    <a href="https://www.lowes.com/pl/tapes/painters-tape/frogtape/4294417406-4294825169" class="item-desc product-link" target="_blank" rel="noopener">FrogTape Multi-Surface (1.41" or 1.88")</a>
+                </div>
+                <span class="price">$~8</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-7" class="shop-checkbox" aria-label="Mark Drop cloths as purchased">
+                <div class="item-text">
+                    <label for="shop-item-7" class="item-name">Drop cloths</label>
+                    <span class="item-desc">Canvas or plastic</span>
+                </div>
+                <span class="price">$10–25</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-8" class="shop-checkbox" aria-label="Mark Spackling compound as purchased">
+                <div class="item-text">
+                    <label for="shop-item-8" class="item-name">Spackling supplies</label>
+                    <span class="item-desc">Lightweight compound, putty knife, sanding sponge</span>
+                </div>
+                <span class="price">$12–18</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-9" class="shop-checkbox" aria-label="Mark Cleaner as purchased">
+                <div class="item-text">
+                    <label for="shop-item-9" class="item-name">Cleaner & Rags</label>
+                    <span class="item-desc">TSP substitute / degreaser</span>
+                </div>
+                <span class="price">$6–10</span>
+            </li>
+            <li class="shop-item">
+                <input type="checkbox" id="shop-item-10" class="shop-checkbox" aria-label="Mark 5-in-1 tool as purchased">
+                <div class="item-text">
+                    <label for="shop-item-10" class="item-name">5-in-1 painter's tool</label>
+                    <span class="item-desc">Multi-purpose tool</span>
+                </div>
+                <span class="price">$6–10</span>
+            </li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+          <div class="small" style="color:var(--muted)">Estimated subtotal (mid-range)</div>
+          <div style="font-weight:800;color:var(--accent)">$140–$210</div>
+        </div>
+
+        <p class="shop-hint">Notes: Links open in a new tab. Prices are estimates and vary by store & region. For the best color match, bring a physical chip (cut behind an outlet) to the paint desk.</p>
+      </aside>
+    </div>
+
+    <footer style="margin-top:18px">
+      <div style="display:flex;justify-content:center"><span class="small">© 2025 Andrew Orsak</span></div>
+    </footer>
+  </div>
+
+  <!-- floating back-to-top -->
+  <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top" style="display:none">↑ TOP</button>
+
+<script>
+  // Dark mode toggle
+  const toggle = document.getElementById('darkToggle');
+  const body = document.body;
+  const dot = toggle.querySelector('.dot');
+  toggle.addEventListener('click', ()=> {
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    if(isDark){
+      body.setAttribute('data-theme','light');
+      toggle.setAttribute('aria-pressed','false');
+    } else {
+      body.setAttribute('data-theme','dark');
+      toggle.setAttribute('aria-pressed','true');
+    }
+  });
+
+  // Step toggle (number -> check)
+  document.querySelectorAll('.num').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const checked = btn.classList.toggle('checked');
+      if(checked){
+        btn.innerHTML = '✓';
+        btn.setAttribute('aria-pressed','true');
+      } else {
+        btn.innerHTML = btn.getAttribute('data-step');
+        btn.setAttribute('aria-pressed','false');
+      }
+    });
+    // keyboard accessible
+    btn.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); btn.click(); }
+    });
+  });
+
+  // Back to top visibility & action
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 300){
+      toTop.style.display = 'block';
+    } else {
+      toTop.style.display = 'none';
+    }
+  });
+  toTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Smooth scrolling for in-page links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const target = document.querySelector(a.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+    });
+  });
+
+  // Remember theme choice in localStorage
+  if(localStorage.getItem('accent-theme') === 'dark'){
+    body.setAttribute('data-theme','dark');
+    toggle.setAttribute('aria-pressed','true');
+  }
+  toggle.addEventListener('click', ()=>{
+    localStorage.setItem('accent-theme', body.getAttribute('data-theme'));
+  });
+</script>
+</body>
+</html>
